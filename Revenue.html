@@ -21,15 +21,102 @@
       referrerpolicy="no-referrer"
     ></script>
     <link href="./Revenue_styles.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
+    <title>Unsight Front-end task</title>
   </head>
   <body>
-    <div id="Rev_leaderboard">
-      <div id="revenue">
-        <canvas id="donutchart" width="100" height="100"></canvas>
+    <div id="Rev_leaderboard" class="d-flex justify-content-evenly">
+      <!--section for doughnut chart-->
+      <div id="revenue" class="d-inline-flex flex-column">
+        <div class="d-flex flex-row justify-content-between">
+          <h3>Total Revenue</h3>
+          <select name="This Month" id="months-btn">
+            <option>This Month</option>
+          </select>
+        </div>
+        <canvas id="donutchart" ></canvas>
       </div>
-      <div id="leaderboard"></div>
+      <!--section for leaderboard display-->
+      <div id="leaderboard" class="d-inline-flex flex-column">
+        <div class="d-inline-flex flex-row justify-content-between">
+          <h3>Leaderboard</h3>
+          <select name="This Month" id="months-btn">
+            <option>This Month</option>
+          </select>
+        </div>
+        <!--Leaderboard is displayed with help of table-->
+        <div class="table-responsive">
+          <table class="table table-responsive-lg table-borderless align-middle">
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><img src="./Images/Group 66.png" alt="profile"></td>
+                <td class="name">Ananya Gupta</td><td>       </td>
+                <td>$59,456</td>
+                <td>&uarr;</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><img src="./Images/Group 66.png" alt="profile"></td>
+                <td class="name">John Nash</td><td>       </td>
+                <td>$47,123</td>
+                <td>&darr;</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td ><img src="./Images/Group 66.png" alt="profile"></td>
+                <td class="name">Stephen Dose</td><td>        </td>
+                <td>$39,247</td>
+                <td>&uarr;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+    </div>
+    <!--section for subscription line chart-->
+    <div id="line-graph">
+      <div class="d-flex flex-row justify-content-between">
+        <h3>Subscriptions</h3>
+        <select name="This Month" id="months-btn">
+          <option>This Month</option>
+        </select>
+      </div>
+      
+      <canvas id="linechart" width="18" height="6"></canvas>
+    </div>
+    <!--section for registrations-->
+    <div id="registrations" class="d-flex justify-content-evenly flex-row ">
+      <!--Applicant registrations-->
+      <div class="container">
+        <div class="d-flex flex-row justify-content-between">
+          <h3>Applicants Registered</h3>
+          <select name="This Month" id="months-btn">
+            <option>This Month</option>
+          </select>
+        </div>
+        <h2>594 Total</h2>
+        <h2 class="lig">Income Generated</h2>
+        <h2>$100,000</h2>
+        <canvas id="regline1" class="linegh"  ></canvas>
+      </div>
+      <!--Recruiter Registrations-->
+      <div class="container">
+        <div class="d-flex flex-row justify-content-between">
+          <h3>Recruiters Registered</h3>
+          <select name="This Month" id="months-btn">
+            <option>This Month</option>
+          </select>
+        </div>
+        <h2>594 Total</h2>
+        <h2 class="lig">Income Generated</h2>
+        <h2>$100,000</h2>
+        <canvas id="regline2" class="linegh" ></canvas>
+      </div>
     </div>
   </body>
-  <script src="./Graphs.js"></script>
+  <!--JS Scripts-->
+  <script src="./Graphs/Linegraph2.js"></script>
+  <script src="./Graphs/Linegraph.js"></script>
+  <script src="./Graphs/DonutGraph.js"></script>
+ 
 </html>
